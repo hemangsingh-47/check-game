@@ -1,4 +1,4 @@
-/* RESET + BASE */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,98 +6,72 @@
 }
 
 body {
-    font-family: "Poppins", "Montserrat", sans-serif;
-    background: radial-gradient(circle at top right, #1a1a1d, #0d0d0f);
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #fff;
+    color: white;
 }
 
-.edit{
-
-border: 2px solid red;
-width:5vh;
-/* margin-left:5vh; */
-background-color: black;
-color: white;
-cursor: pointer;
-border-radius:5px;
-
-
-}
+/* Main Container */
 .container {
-    max-width: 850px;
+    max-width: 800px;
     width: 100%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 25px;
-    padding: 40px 30px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* HEADER */
+/* Header Styles */
 header {
     margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 2.6em;
+    font-size: 2.5em;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #4ECDC4;
-    text-shadow: 0 0 25px rgba(78, 205, 196, 0.4);
+    letter-spacing: 2px;
 }
 
 .color-display {
-    background: linear-gradient(90deg, #4ECDC4, #556270);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 12px;
+    background: white;
+    color: #232526;
+    padding: 15px 30px;
+    border-radius: 10px;
     margin: 15px 0;
     font-size: 2em;
     letter-spacing: 3px;
-    box-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* MESSAGE DISPLAY */
+/* Message Display */
 .message {
     font-size: 1.8em;
-    font-weight: 600;
-    height: 50px;
+    font-weight: bold;
     margin-bottom: 25px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s ease;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* STREAK SECTION */
+/* Streak Section */
 .streak-section {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
-    margin-bottom: 35px;
-    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .streak-box {
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 20px 45px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px 40px;
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.streak-box:hover {
-    transform: translateY(-5px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .streak-box h3 {
@@ -105,17 +79,16 @@ header h1 {
     margin-bottom: 10px;
     opacity: 0.8;
     font-weight: 500;
-    letter-spacing: 1px;
 }
 
 .streak-number {
-    font-size: 3.2em;
+    font-size: 3em;
     font-weight: bold;
-    color: #FFB75E;
-    text-shadow: 0 0 25px rgba(255, 183, 94, 0.5);
+    color: #4ECDC4;
+    text-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
 }
 
-/* CONTROLS */
+/* Control Buttons */
 .controls {
     display: flex;
     gap: 15px;
@@ -124,13 +97,12 @@ header h1 {
     flex-wrap: wrap;
 }
 
-.control-btn,
-.mode-btn {
-    padding: 14px 35px;
+.control-btn, .mode-btn {
+    padding: 12px 30px;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -138,55 +110,62 @@ header h1 {
 }
 
 .control-btn {
-    background: linear-gradient(135deg, #4ECDC4, #45b8b0);
+    background: #4ECDC4;
     color: white;
-    box-shadow: 0 5px 20px rgba(78, 205, 196, 0.4);
 }
 
 .control-btn:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.6);
+    background: #45b8b0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
 }
 
 .mode-btn {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
-
+@keyframes shake{
+    0%{
+        transform: translateX(-7px);
+    }
+    100%{
+        transform: translateX(7px);
+    }
+}
+.wrong{
+    animation: shake 0.1s;
+}
 .mode-btn:hover {
-    background: rgba(255, 255, 255, 0.18);
-    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .mode-btn.selected {
-    background: linear-gradient(135deg, #ffffff, #d1d1d1);
+    background: white;
     color: #232526;
-    border-color: transparent;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    border-color: white;
 }
 
-/* COLOR BOXES */
+/* Color Box Grid */
 .color-box-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
     margin-top: 30px;
 }
 
 .color-box {
     aspect-ratio: 1;
-    border-radius: 18px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    border: 4px solid transparent;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 5px solid transparent;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .color-box:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
 }
 
 .color-box.fade {
@@ -194,41 +173,44 @@ header h1 {
     pointer-events: none;
 }
 
-/* RESPONSIVE */
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
-
+    
     .color-display {
-        font-size: 1.6em;
-        padding: 10px 25px;
+        font-size: 1.5em;
+        padding: 10px 20px;
     }
-
+    
     .message {
         font-size: 1.4em;
     }
-
+    
     .streak-section {
         flex-direction: column;
         gap: 15px;
     }
-
+    
     .streak-box {
-        padding: 15px 35px;
+        padding: 15px 30px;
     }
-
+    
     .streak-number {
-        font-size: 2.4em;
+        font-size: 2.5em;
     }
-
+    
     .color-box-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        gap: 15px;
     }
-
-    .control-btn,
-    .mode-btn {
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .control-btn, .mode-btn {
         width: 100%;
     }
 }
